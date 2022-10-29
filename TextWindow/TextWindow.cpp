@@ -29,8 +29,9 @@ int APIENTRY wWinMain(HINSTANCE hInstance,
 
     // ウィンドウを作成
     hwnd = CreateWindow(
-        szAppName, L"TextWindow",
-        // szAppName, L"真空溶媒",
+        szAppName,
+        // L"TextWindow",
+        L"真空溶媒",
         WS_OVERLAPPEDWINDOW,
         50, 50,
         400, 300,
@@ -64,8 +65,8 @@ LRESULT CALLBACK WndProc(
     HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     HDC hdc;
-    std::wstring str = L"こんにちは、KCG!";
-    // std::wstring str = L"やあ　こんにちは\nいや　いゝおてんきですな\nどちらへ　ごさんぽですか";
+    //std::wstring str = L"こんにちは、KCG!";
+    std::wstring str = L"やあ　こんにちは\nいや　いゝおてんきですな\nどちらへ　ごさんぽですか";
 
     // デバッグ情報表示用
     wchar_t format[] = L"%d,%d,%d,%d\n";
